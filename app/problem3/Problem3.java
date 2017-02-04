@@ -20,20 +20,39 @@ package com.webroothackathon.app.problem3;
 
 /**
  *
- * @author whoever
+ * @author saif
  */
 public class Problem3 {
 
 	public static int findMissingInteger(
-		int[] x, int n)
+		int[] array, int n)
 	{
-		return 0;
+		int sum = 0;
+    int i;
+    for(i=0;i<array.length;i++){
+    	sum+=array[i];
+    }
+    int trueSum = sum+i+1;
+    int missingNumber = trueSum - sum;
+    return missingNumber;
 	}
+
+
 
 	public static int findMissingInteger(
 		int[] x, int a, int b)
 	{
-		return 0;
-	}
-}
+		int i;
+	  int trueSum = 0;
+		int sum = 0;
+ 	 for(i=0;i<x.length;i++){
+ 		 	trueSum+=a++;
+			sum+=x[i];
+ 	 }
+	 trueSum+=a++;
 
+		return trueSum-sum;
+	}
+
+
+}
