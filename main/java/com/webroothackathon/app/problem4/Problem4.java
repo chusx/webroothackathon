@@ -1,4 +1,4 @@
-//package com.webroothackathon.app.problem4;
+package com.webroothackathon.app.problem4;
 
 /*
  * DrawSleepingSnake Problem
@@ -51,12 +51,6 @@ public class Problem4
 
 	public static String getSleepingSnake(int size)
 	{
-		String string = "";
-		string += "fuck";
-		return string;
-	}
-
-	public static void main(String[] args) {
-		System.out.println(getSleepingSnake(7));
+		return "";
 	}
 }
