@@ -23,21 +23,23 @@ public class Problem2 {
      */
     public void getMatchingUrls(ArrayList<UrlCatItem> urls, 
         String s, ArrayList<UrlCatItem> matchingUrls) {
+        if (s != null && urls != null && matchingUrls != null) {
 
-        UrlCatItem[] matchingItems = new UrlCatItem[10];
-        int curr = 0;
-        for (int i = 0; i < urls.size(); i++) {
-            
-            UrlCatItem temp = urls.get(i);
-            if (temp.url.contains(s)) {
-                matchingItems[curr] = new UrlCatItem(temp.url, temp.category, 
-                    temp.reputation);
+            UrlCatItem[] matchingItems = new UrlCatItem[10];
+            int curr = 0;
+            for (int i = 0; i < urls.size(); i++) {
+                
+                UrlCatItem temp = urls.get(i);
+                if (temp.url.contains(s)) {
+                    matchingItems[curr] = new UrlCatItem(temp.url, temp.category, 
+                        temp.reputation);
+                }
             }
+
+            Sorter sorter = new Sorter(matchingItems);
+            sorter.mergeSort(0, matchingItems.length - 1);
+
+            matchingUrls = new ArrayList<UrlCatItem>(Arrays.asList(matchingItems));
         }
-
-        Sorter sorter = new Sorter(matchingItems);
-        sorter.mergeSort(0, matchingItems.length - 1);
-
-        matchingUrls = new ArrayList<UrlCatItem>(Arrays.asList(matchingItems));
     }
 }
