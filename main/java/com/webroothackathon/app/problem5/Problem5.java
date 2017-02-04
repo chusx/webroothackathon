@@ -36,11 +36,21 @@ public class Problem5
         FileReader fr = new FileReader(fileName);
         ipRanges = fr.getAllIpRanges();
     }
+    
 
     /*
      * Return all IP ranges that contain given the IP.
      */
     public ArrayList<String> getIpRanges(String ip) {
+        /*
+        String s = new String("200.txt");
+        initializeIpRanges(s);
+        */
+        System.out.println(ipRanges);
         return null; 
     }
+    /*
+    public static void main(String[] argv) {
+    }*/
+
 }
