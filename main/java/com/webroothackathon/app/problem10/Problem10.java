@@ -1,4 +1,4 @@
-package com.webroothackathon.app.problem10;
+//package com.webroothackathon.app.problem10;
 import java.util.*;
 import java.lang.*;
 
@@ -40,7 +40,7 @@ public class Problem10
     ArrayList<Integer> pinList = new ArrayList<Integer>();
     int digit;
     for(int i = 0; i < observedPin.length(); ++i) {
-      String s = observedPin.substring(i);
+      String s = observedPin.substring(i, i+1);
       try {
         digit = Integer.parseInt(s);
       }
@@ -53,6 +53,7 @@ public class Problem10
     ArrayList<ArrayList<Integer>> pinVariations =
       new ArrayList<ArrayList<Integer>>();
     for(int i = 0; i < pinList.size(); ++i) {
+      pinVariations.add(new ArrayList<Integer>());
       singleVariations(pinList.get(i), pinVariations.get(i));
     }
 
@@ -129,10 +130,18 @@ public class Problem10
     for(int i = 0; i < pinVar.get(depth).size(); ++i) {
       int digit = pinVar.get(depth).get(i);
       intermediate = s.concat(String.valueOf(digit));
+      if(depth < pinVar.size()-1)
+        rAppend(intermediate, pinVar, results, depth+1);
+      else
+        results.add(intermediate);
     }
-    if(depth < pinVar.size()-1)
-      rAppend(intermediate, pinVar, results, depth+1);
-    else
-      results.add(s);
+  }
+
+  public static void main(String[] argv) {
+    String pin = "12";
+    String[] pins = GetPins(pin);
+    for(int i = 0; i < pins.length; ++i) {
+      System.out.println(pins[i]);
+    }
   }
 }
