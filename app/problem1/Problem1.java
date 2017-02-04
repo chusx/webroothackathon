@@ -21,15 +21,20 @@ public class Problem1
 	 */
 	public static IntPair getLowestCatRep(UrlCatItem[] urlCatItems)
 	{
-		//Set first item to be the lowest to start
-		UrlCatItem lowestCatItem = urlCatItems[0];
-	       
-		for(int i = 1; i < urlCatItems.length; i++)
-		{
-			if (lowestCatItem.isGreater(urlCatItems[i]))
-				lowestCatItem = urlCatItems[i];
-		}
+        if (urlCatItems == null) {
+            return new IntPair(-1, -1);
+        }
+        else {
 
-		return new IntPair(lowestCatItem.category, lowestCatItem.reputation);
+		    UrlCatItem lowestCatItem = urlCatItems[urlCatItems.length - 1];
+	           
+		    for(int i = urlCatItems.length - 2; i > 0; i--)
+		    {
+		    	if (lowestCatItem.isGreaterOrEqual(urlCatItems[i]))
+		    		lowestCatItem = urlCatItems[i];
+		    }
+
+		    return new IntPair(lowestCatItem.category, lowestCatItem.reputation);
+        }
 	}
 }

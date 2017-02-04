@@ -9,7 +9,7 @@ public class UrlCatItem
 		this.reputation = reputation;
 	}
 
-	public boolean isGreater(UrlCatItem urlCatItem)
+	public boolean isGreaterOrEqual(UrlCatItem urlCatItem)
 	{	
 		if (this.url.charAt(0) > urlCatItem.url.charAt(0))
 			return true;
