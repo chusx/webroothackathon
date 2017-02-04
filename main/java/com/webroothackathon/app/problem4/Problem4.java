@@ -1,4 +1,4 @@
-package com.webroothackathon.app.problem4;
+//package com.webroothackathon.app.problem4;
 
 /*
  * DrawSleepingSnake Problem
@@ -21,13 +21,13 @@ package com.webroothackathon.app.problem4;
  * Note: There are spaces.
  *
  * example for size = 4
- >____ 
+ >____
   ___ |
  | > ||
  ||__||
  |____|
- * 
- * example for size = 7 
+ *
+ * example for size = 7
  >_______
   ______ |
  | ____ ||
@@ -51,6 +51,12 @@ public class Problem4
 
 	public static String getSleepingSnake(int size)
 	{
-		return "";
+		String string = "";
+		string += "fuck";
+		return string;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(getSleepingSnake(7));
 	}
 }

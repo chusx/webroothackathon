@@ -25,14 +25,16 @@ package com.webroothackathon.app.problem3;
 public class Problem3 {
 
 	public static int findMissingInteger(
-		int[] array, int n)
-	{
+		int[] array, int n){
 		int sum = 0;
-    int i;
-    for(i=0;i<array.length;i++){
+		int trueSum = 0;
+		int i;
+
+		for(i=0;i<array.length;i++){
     	sum+=array[i];
+			trueSum += i+1;
     }
-    int trueSum = sum+i+1;
+    trueSum += i+1;
     int missingNumber = trueSum - sum;
     return missingNumber;
 	}
@@ -53,6 +55,8 @@ public class Problem3 {
 
 		return trueSum-sum;
 	}
+
+	
 
 
 }
