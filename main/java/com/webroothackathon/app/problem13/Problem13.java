@@ -40,9 +40,11 @@ public class Problem13 {
 			}
 		};
 
+        thread.setPriority(Thread.NORM_PRIORITY - 1);
+
 		try {
 
-			thread.run();
+			thread.start();
 			appendName("King");
 			thread.join();
 		}
