@@ -21,20 +21,26 @@ public class Problem1
 	 */
 	public static IntPair getLowestCatRep(UrlCatItem[] urlCatItems)
 	{
-        if (urlCatItems == null) {
+        if (urlCatItems.length == 0) {
             return new IntPair(-1, -1);
         }
         else {
 
-		    UrlCatItem lowestCatItem = urlCatItems[urlCatItems.length - 1];
+	        UrlCatItem lowestCatItem = urlCatItems[urlCatItems.length - 1];
 	           
-		    for(int i = urlCatItems.length - 2; i > 0; i--)
-		    {
-		    	if (lowestCatItem.isGreater(urlCatItems[i]))
-		    		lowestCatItem = urlCatItems[i];
-		    }
-
-		    return new IntPair(lowestCatItem.category, lowestCatItem.reputation);
+	        for(int i = urlCatItems.length - 2; i > 0; i--)
+	        {
+	        	if (lowestCatItem.isGreater(urlCatItems[i]))
+	        		lowestCatItem = urlCatItems[i];
+	        }
+	        return new IntPair(lowestCatItem.category, lowestCatItem.reputation);
         }
+
 	}
+    /*
+    public static void main(String[] argv) {
+        UrlCatItem[] u = new UrlCatItem[0];
+        getLowestCatRep(u);
+    }
+    */
 }
