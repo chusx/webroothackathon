@@ -51,6 +51,77 @@ public class Problem4
 
 	public static String getSleepingSnake(int size)
 	{
-		return "";
+        if (size == 0) {
+		    return "Size needs to be a positive integer";
+        }
+        else if (size % 2 != 0) {
+            StringBuffer sb = new StringBuffer(); 
+
+            // first line
+            sb.append(">");
+            for (int j = 0; j < size; j++) {
+                sb.append("_");
+            }
+            //sb.append(" \n");
+            sb.append("\n");
+            
+            // second through half
+            for (int i = 1; i < size / 2 + 1; i++) {
+                for (int j = 0; j < i - 1; j++) {
+                    sb.append("|");
+                }
+                sb.append(" ");
+                for (int j = 0; j < size - 2 * i + 1; j++) {
+                    sb.append("_");
+                }
+
+                sb.append(" ");
+                for (int j = 0; j < i; j++) {
+                    sb.append("|");
+                }
+                sb.append("\n");
+            }
+
+            // middle
+            for (int j = 0; j < size - 4; j++) {
+                sb.append("|");
+            }
+            sb.append(" < ");
+            for (int j = 0; j < size - 4; j++) {
+                sb.append("|");
+            }
+            sb.append("\n");
+
+            
+            int k = 0;
+            // half through end
+            for (int i = size / 2 + 1; i < size; i++, k++) {
+                for (int j = i; j < size; j++) {
+                    sb.append("|");
+                }
+                for (int j = 0; j < i - 1 + k; j++) {
+                    sb.append("_");
+
+                }
+
+                for (int j = i; j < size; j++) {
+                    sb.append("|");
+                }
+                sb.append("\n");
+            }
+            return sb.toString();
+        }
+        else {
+            StringBuffer sb = new StringBuffer(); 
+            return sb.toString();
+        }
+        
 	}
+    /*
+    public static void main(String[] argv) {
+        System.out.print(getSleepingSnake(4));
+        System.out.println();
+        System.out.print(getSleepingSnake(7));
+    }
+    */
 }
