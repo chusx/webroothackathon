@@ -37,7 +37,7 @@ public class Problem10
    */
 
   public static String[] GetPins(String observedPin) {
-    if(observedPin.length() == 0) return new String[0];
+    if(observedPin == null || observedPin.length() == 0) return new String[0];
     ArrayList<Integer> pinList = new ArrayList<Integer>();
     int digit;
     for(int i = 0; i < observedPin.length(); ++i) {
@@ -70,9 +70,7 @@ public class Problem10
     return stringResults;
   }
 
-  private static void singleVariations(int digit,
-    ArrayList<Integer> pinVar)
-  {
+  private static void singleVariations(int digit, ArrayList<Integer> pinVar) {
     switch(digit) {
       case 0: pinVar.add(0);
               pinVar.add(8);
@@ -138,12 +136,12 @@ public class Problem10
     }
   }
 
-/*  public static void main(String[] argv) {
+  /*public static void main(String[] argv) {
     String pin = "543228";
     String[] pins = GetPins(pin);
-    for(int i = 0; i < pins.length; ++i) {
-      System.out.println(pins[i]);
-    }
+    //for(int i = 0; i < pins.length; ++i) {
+      //System.out.println(pins[i]);
+    //}
     pin = "abcd";
     pins = GetPins(pin);
     pin = "!@#$";
@@ -153,6 +151,8 @@ public class Problem10
     pin = "aaa9a";
     pins = GetPins(pin);
     pin = "";
+    pins = GetPins(pin);
+    pin = null;
     pins = GetPins(pin);
   }*/
 }
