@@ -52,7 +52,7 @@ public class Problem4
 	public static String getSleepingSnake(int size)
 	{
         if (size == 0) {
-		    return "Size needs to be a positive integer";
+		    return "Size needs to be a positive integer\n";
         }
         if (size == 4) {
             return ">____ \n ___ |\n| > ||\n||__||\n|____|\n";
@@ -130,7 +130,7 @@ public class Problem4
     public static void main(String[] argv) {
         System.out.print(getSleepingSnake(4));
         System.out.print(getSleepingSnake(7));
-        System.out.print(getSleepingSnake(9));
+        System.out.print(getSleepingSnake(0));
     }
     */
 }
