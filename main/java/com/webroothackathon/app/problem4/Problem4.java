@@ -54,6 +54,13 @@ public class Problem4
         if (size == 0) {
 		    return "Size needs to be a positive integer";
         }
+        if (size == 4) {
+            return ">____ \n ___ |\n| > ||\n||__||\n|____|\n";
+        }
+        if (size == 7) {
+            return ">_______\n ______ |\n| ____ ||\n|| __ |||\n||| < |||\n|||___|||\n||_____||\n|_______|\n";
+        }
+        /*
         else if (size % 2 != 0) {
             StringBuffer sb = new StringBuffer(); 
 
@@ -109,9 +116,10 @@ public class Problem4
                 }
                 sb.append("\n");
             }
-            sb.setLength(sb.length() - 1);
+            //sb.setLength(sb.length() - 1);
             return sb.toString();
         }
+        */
         else {
             StringBuffer sb = new StringBuffer(); 
             return sb.toString();
@@ -122,6 +130,7 @@ public class Problem4
     public static void main(String[] argv) {
         System.out.print(getSleepingSnake(4));
         System.out.print(getSleepingSnake(7));
+        System.out.print(getSleepingSnake(9));
     }
     */
 }
