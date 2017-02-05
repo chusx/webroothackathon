@@ -1,6 +1,6 @@
-//package com.webroothackathon.app.problem2;
+package com.webroothackathon.app.problem2;
 
-//import com.webroothackathon.app.problem1.UrlCatItem;
+import com.webroothackathon.app.problem1.UrlCatItem;
 import java.util.*;
 
 public class Problem2 {
@@ -53,7 +53,7 @@ public class Problem2 {
     return resized;
   }
 
-  public static void main(String[] args) {
+/*  public static void main(String[] args) {
     ArrayList<UrlCatItem> urls = new ArrayList<UrlCatItem>();
     ArrayList<UrlCatItem> matchingUrls = new ArrayList<UrlCatItem>();
     String s = "abc";
@@ -70,5 +70,5 @@ public class Problem2 {
     for(int i = 0; i < matchingUrls.size(); ++i) {
       System.out.println(matchingUrls.get(i));
     }
-  }
+  }*/
 }
