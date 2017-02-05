@@ -109,6 +109,7 @@ public class Problem4
                 }
                 sb.append("\n");
             }
+            sb.setLength(sb.length() - 1);
             return sb.toString();
         }
         else {
@@ -120,7 +121,6 @@ public class Problem4
     /*
     public static void main(String[] argv) {
         System.out.print(getSleepingSnake(4));
-        System.out.println();
         System.out.print(getSleepingSnake(7));
     }
     */
