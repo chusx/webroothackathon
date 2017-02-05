@@ -136,12 +136,4 @@ public class Problem10
         results.add(intermediate);
     }
   }
-
-  public static void main(String[] argv) {
-    String pin = "12";
-    String[] pins = GetPins(pin);
-    for(int i = 0; i < pins.length; ++i) {
-      System.out.println(pins[i]);
-    }
-  }
 }
