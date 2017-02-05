@@ -59,7 +59,7 @@ public class Problem10
     }
 
     ArrayList<String> results = new ArrayList<String>();
-    int depth = 0;
+    int depth = pinVariations.size() - 1;
     rAppend("", pinVariations, results, depth);
 
     String[] stringResults = new String[results.size()];
@@ -128,15 +128,15 @@ public class Problem10
     String intermediate = new String();
     for(int i = 0; i < pinVar.get(depth).size(); ++i) {
       int digit = pinVar.get(depth).get(i);
-      intermediate = s.concat(String.valueOf(digit));
-      if(depth < pinVar.size()-1)
-        rAppend(intermediate, pinVar, results, depth+1);
+      intermediate = String.valueOf(digit).concat(s);
+      if(depth > 0)
+        rAppend(intermediate, pinVar, results, depth-1);
       else
         results.add(intermediate);
     }
   }
 
-  /*public static void main(String[] argv) {
+/*  public static void main(String[] argv) {
     String pin = "543228";
     String[] pins = GetPins(pin);
     //for(int i = 0; i < pins.length; ++i) {
@@ -154,5 +154,12 @@ public class Problem10
     pins = GetPins(pin);
     pin = null;
     pins = GetPins(pin);
+    pin = " ";
+    pins = GetPins(pin);
+    pin = "12";
+    pins = GetPins(pin);
+    for(int i = 0; i < pins.length; ++i) {
+      System.out.println(pins[i]);
+    }
   }*/
 }
