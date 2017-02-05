@@ -87,7 +87,7 @@ public class Problem11 {
 
 	private class Demo {
 
-		public synchronized void test()
+		public void test()
 		{
 			for (int i = 0; i < 10; i++) {
 
@@ -136,4 +136,9 @@ public class Problem11 {
 			return false;
 		}
 	}
+    /*
+    public static void main(String[] argv) {
+        System.out.println(checkSynchronized());
+    }
+    */
 }
