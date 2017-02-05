@@ -45,7 +45,7 @@ public class Problem15 {
 
 				try {
 
-					Thread.sleep(1000);
+					Thread.sleep(1);
 				}
 				catch (InterruptedException error) {
 
@@ -73,7 +73,7 @@ public class Problem15 {
 
 				try {
 
-					Thread.sleep(4000);
+					Thread.sleep(2);
 				}
 				catch(Exception error) {
 
@@ -122,4 +122,10 @@ public class Problem15 {
 
 		return elapsedTime;
 	}
+    /*
+    public static void main(String[] arg) {
+        System.out.println(produceAndConsume());
+
+    }
+    */
 }
