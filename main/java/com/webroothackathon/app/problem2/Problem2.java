@@ -1,6 +1,6 @@
-//package com.webroothackathon.app.problem2;
+package com.webroothackathon.app.problem2;
 
-//import com.webroothackathon.app.problem1.UrlCatItem;
+import com.webroothackathon.app.problem1.UrlCatItem;
 import java.util.*;
 
 public class Problem2 {
@@ -21,7 +21,7 @@ public class Problem2 {
    * @param (s)    (string sequence to be matched in UrlCatItems.url)
    * @param (matchingUrls) (array that should be populated with all the matched UrlCatItems)
    */
-  public static void getMatchingUrls(ArrayList<UrlCatItem> urls, 
+  public void getMatchingUrls(ArrayList<UrlCatItem> urls, 
       String s, ArrayList<UrlCatItem> matchingUrls) {
     if (s != null && urls != null && matchingUrls != null) {
 
@@ -54,7 +54,7 @@ public class Problem2 {
     return resizedArr;
   }
 
-  public static void main(String[] args) {
+/*  public static void main(String[] args) {
     ArrayList<UrlCatItem> urls = new ArrayList<UrlCatItem>();
     ArrayList<UrlCatItem> matchingUrls = new ArrayList<UrlCatItem>();
     String s = "abc";
@@ -67,5 +67,5 @@ public class Problem2 {
     for(int i = 0; i < matchingUrls.size(); ++i) {
       System.out.println(matchingUrls.get(i));
     }
-  }
+  }*/
 }
