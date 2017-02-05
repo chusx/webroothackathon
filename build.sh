@@ -1,4 +1,4 @@
 #!/bin/bash
-cd ./main/java/com/webroothackathon
-zip -r webroot.zip ./app/
-mv webroot.zip ../../../../
+cd ./main/java/com/webroothackathon/app/
+zip -r submit.zip .
+mv submit.zip ../../../../../
