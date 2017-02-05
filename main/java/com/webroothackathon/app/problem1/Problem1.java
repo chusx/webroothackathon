@@ -33,6 +33,7 @@ public class Problem1
         if (lowestCatItem.isGreater(urlCatItems[i]))
           lowestCatItem = urlCatItems[i];
       }
+      System.out.println(lowestCatItem);
       return new IntPair(lowestCatItem.category, lowestCatItem.reputation);
     }
 
@@ -46,10 +47,15 @@ public class Problem1
 
     UrlCatItem[] urlArr = new UrlCatItem[5];
     urlArr[0] = new UrlCatItem("abc", 0, 100);
-    urlArr[1] = new UrlCatItem("abc", 7, 100);
-    urlArr[2] = new UrlCatItem("abc", 7, 100);
-    urlArr[3] = new UrlCatItem("abc", 7, 100);
-    urlArr[4] = new UrlCatItem("abc", 7, 100);
+    System.out.println(0+":"+urlArr[0]);
+    urlArr[1] = new UrlCatItem("def", 1, 101);
+    System.out.println(1+":"+urlArr[0]);
+    urlArr[2] = new UrlCatItem("ghi", 2, 102);
+    System.out.println(2+":"+urlArr[0]);
+    urlArr[3] = new UrlCatItem("jkl", 3, 103);
+    System.out.println(3+":"+urlArr[0]);
+    urlArr[4] = new UrlCatItem("mno", 4, 104);
+    System.out.println(4+":"+urlArr[0]);
     IntPair test1 = getLowestCatRep(urlArr);
     System.out.println(test1.first);
     System.out.println(test1.second);
