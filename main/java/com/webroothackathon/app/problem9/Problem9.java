@@ -33,14 +33,14 @@ public class Problem9 {
 
 		public TestThread()
 		{
-			start();
+			run();
 		}
 
 		@Override
 		public void run()
 		{
-			synchronized (itsLock) {
 
+			synchronized (itsLock) {
 				add();
 
 				try {
@@ -57,7 +57,7 @@ public class Problem9 {
 
         public void add()
 		{
-			theCounter += 1;
+			    theCounter += 1;
 			if (theCounter > theCounterMaximum) {
 
 				theCounterMaximum = theCounter;
@@ -66,7 +66,7 @@ public class Problem9 {
 
         public void sub()
 		{
-			theCounter -= 1;
+			    theCounter -= 1;
        }
 	}
 
@@ -94,6 +94,11 @@ public class Problem9 {
 
 		return theCounterMaximum;
 	}
+    /*
+    public static void main(String[] arg) {
+        System.out.println(maximumCounter());
+    }
+    */
 }
 
 
