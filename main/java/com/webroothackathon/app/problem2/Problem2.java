@@ -21,7 +21,7 @@ public class Problem2 {
    * @param (s)    (string sequence to be matched in UrlCatItems.url)
    * @param (matchingUrls) (array that should be populated with all the matched UrlCatItems)
    */
-  public static void getMatchingUrls(ArrayList<UrlCatItem> urls, 
+  public void getMatchingUrls(ArrayList<UrlCatItem> urls, 
       String s, ArrayList<UrlCatItem> matchingUrls) {
     if (s != null && urls != null && matchingUrls != null) {
       UrlCatItem[] matchingItems = new UrlCatItem[10];
