@@ -46,7 +46,7 @@ public class UrlCatItem
         reputation == other.reputation;
     }
 
-  public static String url;
-  public static int category;
+  public String url;
+  public int category;
   public static int reputation;
 }

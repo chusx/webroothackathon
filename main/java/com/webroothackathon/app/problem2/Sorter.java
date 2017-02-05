@@ -1,6 +1,6 @@
-//package com.webroothackathon.app.problem2;
+package com.webroothackathon.app.problem2;
 
-//import com.webroothackathon.app.problem1.UrlCatItem;
+import com.webroothackathon.app.problem1.UrlCatItem;
 import java.util.*;
 
 
@@ -18,31 +18,31 @@ import java.util.*;
 
 class Sorter 
 {
-  public Sorter(UrlCatItem[] urlCatItems)
-  {
-    this.urlCatItems = urlCatItems;
-    this.tempUrlCatItems = new UrlCatItem[urlCatItems.length];
-  }
+	public Sorter(UrlCatItem[] urlCatItems)
+	{
+		this.urlCatItems = urlCatItems;
+		this.tempUrlCatItems = new UrlCatItem[urlCatItems.length];
+	}
 
-  public void mergeSort(int lowIndex, int highIndex)
-  {
-    if(lowIndex < highIndex)
-    {
-      int middle = lowIndex + (highIndex - lowIndex) / 2;
+	public void mergeSort(int lowIndex, int highIndex)
+	{
+		if(lowIndex < highIndex)
+		{
+			int middle = lowIndex + (highIndex - lowIndex) / 2;
 
-      //recursion on left half
-      mergeSort(lowIndex, middle);
-      //recursion on right half
-      mergeSort(middle+1, highIndex);
+			//recursion on left half
+			mergeSort(lowIndex, middle);
+			//recursion on right half
+			mergeSort(middle+1, highIndex);
 
-      mergeParts(lowIndex, middle, highIndex);
-    }
-  }
+			mergeParts(lowIndex, middle, highIndex);
+		}
+	}
 
-  private void mergeParts(int lowIndex, int midIndex, int highIndex)
-  {	
-  }
+	private void mergeParts(int lowIndex, int midIndex, int highIndex)
+	{	
+	}
 
-  private UrlCatItem[] urlCatItems;
-  private UrlCatItem[] tempUrlCatItems;
+	private UrlCatItem[] urlCatItems;
+	private UrlCatItem[] tempUrlCatItems;
 }
