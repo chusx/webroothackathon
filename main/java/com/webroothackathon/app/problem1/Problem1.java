@@ -46,16 +46,44 @@ public class Problem1
 
     UrlCatItem[] urlArr = new UrlCatItem[5];
     urlArr[0] = new UrlCatItem("abc", 0, 100);
-    System.out.println(0+":"+urlArr[0]);
+    //System.out.println(0+":"+urlArr[0]);
     urlArr[1] = new UrlCatItem("def", 1, 101);
-    System.out.println(1+":"+urlArr[1]);
+    //System.out.println(1+":"+urlArr[1]);
     urlArr[2] = new UrlCatItem("ghi", 2, 102);
-    System.out.println(2+":"+urlArr[2]);
+    //System.out.println(2+":"+urlArr[2]);
     urlArr[3] = new UrlCatItem("jkl", 3, 103);
-    System.out.println(3+":"+urlArr[3]);
+    //System.out.println(3+":"+urlArr[3]);
     urlArr[4] = new UrlCatItem("mno", 4, 104);
-    System.out.println(4+":"+urlArr[4]);
+    //System.out.println(4+":"+urlArr[4]);
     IntPair test1 = getLowestCatRep(urlArr);
+    System.out.println(test1.first);
+    System.out.println(test1.second);
+
+    urlArr[0] = new UrlCatItem("ab", 5, 99);
+    //System.out.println(0+":"+urlArr[0]);
+    urlArr[1] = new UrlCatItem("ab", 10, 101);
+    //System.out.println(1+":"+urlArr[1]);
+    urlArr[2] = new UrlCatItem("ab", 20, 102);
+    //System.out.println(2+":"+urlArr[2]);
+    urlArr[3] = new UrlCatItem("ab", 30, 103);
+    //System.out.println(3+":"+urlArr[3]);
+    urlArr[4] = new UrlCatItem("ab", 40, 104);
+    //System.out.println(4+":"+urlArr[4]);
+    test1 = getLowestCatRep(urlArr);
+    System.out.println(test1.first);
+    System.out.println(test1.second);
+
+    urlArr[0] = new UrlCatItem("ab", 10, 110);
+    //System.out.println(0+":"+urlArr[0]);
+    urlArr[1] = new UrlCatItem("ab", 10, 101);
+    //System.out.println(1+":"+urlArr[1]);
+    urlArr[2] = new UrlCatItem("ab", 10, 102);
+    //System.out.println(2+":"+urlArr[2]);
+    urlArr[3] = new UrlCatItem("ab", 10, 103);
+    //System.out.println(3+":"+urlArr[3]);
+    urlArr[4] = new UrlCatItem("ab", 10, 104);
+    //System.out.println(4+":"+urlArr[4]);
+    test1 = getLowestCatRep(urlArr);
     System.out.println(test1.first);
     System.out.println(test1.second);
   }*/
