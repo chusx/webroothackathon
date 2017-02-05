@@ -37,8 +37,8 @@ public class Problem1
     }
 
   }
-/*
-  public static void main(String[] argv) {
+
+/*  public static void main(String[] argv) {
     UrlCatItem[] u = new UrlCatItem[0];
     IntPair test = getLowestCatRep(u);
     System.out.println(test.first);
@@ -46,13 +46,17 @@ public class Problem1
 
     UrlCatItem[] urlArr = new UrlCatItem[5];
     urlArr[0] = new UrlCatItem("abc", 0, 100);
-    urlArr[1] = new UrlCatItem("abc", 7, 100);
-    urlArr[2] = new UrlCatItem("abc", 7, 100);
-    urlArr[3] = new UrlCatItem("abc", 7, 100);
-    urlArr[4] = new UrlCatItem("abc", 7, 100);
+    System.out.println(0+":"+urlArr[0]);
+    urlArr[1] = new UrlCatItem("def", 1, 101);
+    System.out.println(1+":"+urlArr[1]);
+    urlArr[2] = new UrlCatItem("ghi", 2, 102);
+    System.out.println(2+":"+urlArr[2]);
+    urlArr[3] = new UrlCatItem("jkl", 3, 103);
+    System.out.println(3+":"+urlArr[3]);
+    urlArr[4] = new UrlCatItem("mno", 4, 104);
+    System.out.println(4+":"+urlArr[4]);
     IntPair test1 = getLowestCatRep(urlArr);
     System.out.println(test1.first);
     System.out.println(test1.second);
-  }
-*/
+  }*/
 }
